@@ -8,4 +8,14 @@ public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
+
+	public boolean someLibraryMethod2() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	public String someLibraryMethod3() {
+		// TODO Auto-generated method stub
+		return "MyTestString";
+	}
 }

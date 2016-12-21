@@ -1,4 +1,7 @@
 import org.junit.Test;
+
+import junit.framework.TestCase;
+
 import static org.junit.Assert.*;
 
 /*
@@ -7,9 +10,23 @@ import static org.junit.Assert.*;
  *
  * @author Frank, @date 20.12.16 10:32
  */
-public class LibraryTest {
+public class LibraryTest extends TestCase {
+	Library classUnderTest;
+	
+	@Override
+	public void setUp() {
+		classUnderTest = new Library();
+	}
+	
     @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+    
+    @Test public void testSomeLibraryMethod2() {
+        assertFalse("someLibraryMethod2 should return 'true'", classUnderTest.someLibraryMethod2());
+    }
+    
+    @Test public void testSomeLibraryMethod3() {
+        assertEquals("someLibraryMethod3 should return 'MyTestString'", classUnderTest.someLibraryMethod3(), "MyTestString");
     }
 }
